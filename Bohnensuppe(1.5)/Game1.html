@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h2><button style="height:60px;width:150px;background-color: aqua;" onClick="clickCounter();" type="button">Mein Herr, berührung wird angefragt</h2>
+    <link rel="icon" type="image/x-icon" href="Bohnensuppe_files/Icon.png">
+    <h1><a href="Bohnensuppe.html">Go back</a></h1>
+    <p id="demo">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game1</title>
+</head>
+<body style="background-color:rgb(10, 128, 224);"></body>
+
+<script>
+    function clickCounter() {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+          localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+          localStorage.clickcount = 1;
+        }
+        document.getElementById("demo").innerHTML = "Mein Herr, sie drückten den Knopf  " + localStorage.clickcount + " mal.";
+      } else {
+        document.getElementById("demo").innerHTML = "!!!Ain fela ist aufgeträten!!! Falscha brausa";
+      }
+    }
+    </script>
+   <br>
+   <br>
+   
+</body>
+</html>
